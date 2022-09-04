@@ -19,6 +19,7 @@ public class CidadesController {
 
 
     }
+
     @GetMapping(path = "/cidades {codigoDaCidades}")
     public Optional<CidadesModel> buscarCidadesPorId(@PathVariable Integer codigoDoCidades) {
         return service.buscarPorId(codigoDoCidades);
@@ -31,11 +32,12 @@ public class CidadesController {
     }
 
     @PutMapping(path = "/cidades/{codigoDoCidades")
-    public CidadesModel alterarCidades(@RequestBody CidadesModel cidades){
+    public CidadesModel alterarCidades(@RequestBody CidadesModel cidades) {
         return service.alterar(cidades);
     }
+
     @DeleteMapping(path = "/cidades/{codigoDoCidades}")
-    public void deletarCidades(@PathVariable Integer codigoDoCidades){
+    public void deletarCidades(@PathVariable Integer codigoDoCidades) {
         service.deletar(codigoDoCidades);
     }
 }

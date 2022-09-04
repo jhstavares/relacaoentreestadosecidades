@@ -37,7 +37,8 @@ public class EstadosService {
         return repository.save(estados);
 
     }
-    public void deletar(Integer codigoDoEstado){
+
+    public void deletar(Integer codigoDoEstado) {
         repository.deleteById(codigoDoEstado);
     }
 }

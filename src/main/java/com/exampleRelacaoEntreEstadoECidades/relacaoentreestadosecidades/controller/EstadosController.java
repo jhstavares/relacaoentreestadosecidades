@@ -33,11 +33,12 @@ public class EstadosController {
     }
 
     @PutMapping(path = "/estados/{codigoDoEstados")
-    public EstadosModel alterarEstados(@RequestBody EstadosModel estados){
+    public EstadosModel alterarEstados(@RequestBody EstadosModel estados) {
         return service.alterar(estados);
     }
+
     @DeleteMapping(path = "/estados/{codigoDoEstado}")
-    public void deletarEstados(@PathVariable Integer codigoDoEstado){
+    public void deletarEstados(@PathVariable Integer codigoDoEstado) {
         service.deletar(codigoDoEstado);
     }
 

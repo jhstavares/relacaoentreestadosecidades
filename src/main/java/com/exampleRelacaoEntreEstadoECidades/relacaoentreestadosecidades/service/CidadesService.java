@@ -17,6 +17,7 @@ public class CidadesService {
         return repository.findAll();
 
     }
+
     public Optional<CidadesModel> buscarPorId(Integer codigoDoCidades) {
         return repository.findById(codigoDoCidades);
 

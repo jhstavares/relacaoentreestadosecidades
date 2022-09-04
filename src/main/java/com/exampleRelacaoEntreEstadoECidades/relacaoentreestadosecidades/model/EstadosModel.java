@@ -25,7 +25,7 @@ public class EstadosModel {
     @Column(name = "nome_estado")
     private String nomeEstado;
 
-    @OneToMany(mappedBy = "estado" , cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "estado", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<CidadesModel> cidades = new ArrayList<>();
 }
